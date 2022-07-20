@@ -1,0 +1,24 @@
+ls:
+  .dir: kebab-case | regex:__tests__
+  .js: kebab-case
+  .ts: kebab-case
+  .d.ts: kebab-case
+  .component.ts: kebab-case
+  .hook.ts: kebab-case
+  .store.ts: kebab-case
+  .routes.ts: kebab-case
+  .service.ts: kebab-case
+  .config.ts: kebab-case
+  .config.js: kebab-case
+  .spec.ts: kebab-case
+  .mock.ts: kebab-case
+  .vue: PascalCase
+
+ignore:
+  - node_modules
+  - .git
+  - .vscode
+  - .idea
+  - dist
+  - .local
+  - .husky
