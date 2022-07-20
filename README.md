@@ -1,46 +1,51 @@
-# five-end
+## 概述
 
-This template should help get you started developing with Vue 3 in Vite.
+2022 年 7 月创建的基于 Vue3.2+TypeScript 的工程，此工程的主要目的：
 
-## Recommended IDE Setup
+- Vue3搭建一套完整架构
+- 将开发中可能用到的工具或样式等进行统一管理
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## 启动方式
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
+进入项目目录执行
 ```sh
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+## git commit说明
 
-```sh
-npm run build
-```
+`git commit -m <type>[scope]: <description>`
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+type :用于表明这次提交的改动类型，是新增了功能？还是修改了测试代码？又或者是更新了文档？总结以下 11 种类型:
 
-```sh
-npm run test:unit
-```
+- build:主要目的是修改项目构建系统(例如 glup，webpack，rollup 的配置等)的提交
+- ci:主要目的是修改项目继续集成流程(例如 Travis，Jenkins，GitLab CI，Circle 等)的提交
+- docs:文档更新
+- feat:新增功能
+- fix:bug 修复
+- perf:性能优化
+- refactor:重构代码(既没有新增功能，也没有修复 bug)
+- style:不影响程序逻辑的代码修改(修改空白字符，补全缺失的分号等)
+- test:新增测试用例或是更新现有测试
+- revert:回滚某个更早之前的提交
+- chore:不属于以上类型的其他类型(日常事务)
+
+scope:一个可选的修改范围。用于标识此次提交主要涉及到代码中哪个模块。
+
+description:一句话描述此次提交的主要内容，做到言简意赅。
+
+## 日志
+
+### 2022.07.20
+- npm init vue@latest
+- TypeScript `yes`
+- JSX `yes`
+- Vue Router `yes`
+- Pinia `yes`
+- Vitest `yes`
+- Cypress `no`
+- ESLint `no`
+- 手动添加Eslint+Prettier(代码格式检查)
+- 添加ls-lint(文件命名格式检查) lint-stage(husky时只检测暂存区内容)
+- 添加husky
