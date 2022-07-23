@@ -22,3 +22,4 @@ ignore:
   - dist
   - .local
   - .husky
+  - .eslintrc.js

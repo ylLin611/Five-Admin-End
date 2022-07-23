@@ -49,3 +49,8 @@ description:一句话描述此次提交的主要内容，做到言简意赅。
 - 手动添加Eslint+Prettier(代码格式检查)
 - 添加ls-lint(文件命名格式检查) lint-stage(husky时只检测暂存区内容)
 - 添加husky
+
+### 2022.07.23
+- 安装Element-Plus
+- https://element-plus.gitee.io/zh-CN/guide/installation.html#%E4%BD%BF%E7%94%A8%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8
+-
