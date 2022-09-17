@@ -18,6 +18,8 @@
   },
   "dependencies": {
     "@ls-lint/ls-lint": "^1.11.2",
+    "axios": "^0.27.2",
+    "element-plus": "^2.2.17",
     "pinia": "^2.0.14",
     "vue": "^3.2.37",
     "vue-router": "^4.0.16"
@@ -38,7 +40,8 @@
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "typescript": "^4.7.4",
-    "unplugin-vue-components": "^0.21.0",
+    "unplugin-auto-import": "^0.11.2",
+    "unplugin-vue-components": "^0.21.2",
     "vite": "^2.9.13",
     "vite-plugin-banner": "^0.3.0",
     "vue-tsc": "^0.38.2"

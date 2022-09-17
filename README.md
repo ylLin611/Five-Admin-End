@@ -10,6 +10,11 @@ Vue3+Ts+Vite+Pinia 前端模板
 - ls-lint
 - lint-staged to husky
 
+### 2022.09.17
+- axios
+- element-plus
+- auto import vue
+
 ## Vscode必装插件
 - `Code Spell Checker` 拼写检查
 - `ESLint`

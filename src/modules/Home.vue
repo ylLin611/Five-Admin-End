@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" :src="logo" />
+    <el-button type="primary">测试</el-button>
   </div>
 </template>
 
