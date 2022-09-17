@@ -1,25 +1,45 @@
-## 概述
+# 概述
 
-2022 年 7 月创建的基于 Vue3.2+TypeScript 的工程，此工程的主要目的：
+Vue3+Ts+Vite+Pinia 前端模板
 
-- Vue3搭建一套完整架构
-- 将开发中可能用到的工具或样式等进行统一管理
+## 更新日志
 
-## 启动方式
+### 2022.09.16
+- uninstall yorkie , install husky
+- commitlint
+- ls-lint
+- lint-staged to husky
 
-进入项目目录执行
-```sh
-npm install
-npm run dev
+## Vscode必装插件
+- `Code Spell Checker` 拼写检查
+- `ESLint`
+- `Prettier - Code formatter`
+- `Vue Language Features (Volar)`
+
+## 开发规范
+
+### 目录结构
+
+业务代码书写位置
+```plainText
+-src
+|-assets 存放静态资源
+  |-img
+    |-<module-name> 业务目录名称
+|-modules 存放业务代码
+  |-<module-name> 业务目录名称
+    |-types                       业务相关类型声明
+    |-service                     业务相关API调用
+    |-store                       模块store
+    |-views                       业务相关页面
+    |-<module-name>.routes.ts     业务模块路由配置
 ```
-
-## git commit说明
-
+### git commit 规范
 `git commit -m <type>[scope]: <description>`
 
-type :用于表明这次提交的改动类型，是新增了功能？还是修改了测试代码？又或者是更新了文档？总结以下 11 种类型:
+type :用于表明我们这次提交的改动类型，是新增了功能？还是修改了测试代码？又或者是更新了文档？总结以下 11 种类型:
 
-- build:主要目的是修改项目构建系统(例如 glup，webpack，rollup 的配置等)的提交
+- build:主要目的是修改项目构建系统(例如 webpack，rollup 的配置等)的提交
 - ci:主要目的是修改项目继续集成流程(例如 Travis，Jenkins，GitLab CI，Circle 等)的提交
 - docs:文档更新
 - feat:新增功能
@@ -35,22 +55,9 @@ scope:一个可选的修改范围。用于标识此次提交主要涉及到代�
 
 description:一句话描述此次提交的主要内容，做到言简意赅。
 
-## 日志
+#### 提交示例
 
-### 2022.07.20
-- npm init vue@latest
-- TypeScript `yes`
-- JSX `yes`
-- Vue Router `yes`
-- Pinia `yes`
-- Vitest `yes`
-- Cypress `no`
-- ESLint `no`
-- 手动添加Eslint+Prettier(代码格式检查)
-- 添加ls-lint(文件命名格式检查) lint-stage(husky时只检测暂存区内容)
-- 添加husky
-
-### 2022.07.23
-- 安装Element-Plus
-- https://element-plus.gitee.io/zh-CN/guide/installation.html#%E4%BD%BF%E7%94%A8%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8
--
+```bash
+git commit -m 'feat: 增加 xxx 功能'
+git commit -m 'fix(JIRA-123): 修复 xxx bug'
+```

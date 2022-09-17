@@ -1,14 +1,12 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+import App from '@/App.vue'
+import router from '@/common/router'
 
-import App from './App.vue'
-import router from './router'
+// 全局样式
+import '@less/global.less'
 
-import './assets/main.css'
-
-const app = createApp(App)
-
-app.use(createPinia())
-app.use(router)
-
-app.mount('#app')
+createApp(App)
+  .use(createPinia()) // 启用 Pinia
+  .use(router)
+  .mount('#app')
