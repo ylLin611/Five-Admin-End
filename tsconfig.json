@@ -31,8 +31,8 @@
       "@fonts/*": [
         "src/assets/fonts/*"
       ],
-      "@libs/*": [
-        "src/libs/*"
+      "@common/*": [
+        "src/common/*"
       ],
       "@cp/*": [
         "src/components/*"

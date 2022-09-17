@@ -2,6 +2,12 @@
 
 Vue3+Ts+Vite+Pinia 前端模板
 
+## 启动方式
+进入项目目录执行
+```sh
+npm install
+npm run dev
+```
 ## 更新日志
 
 ### 2022.09.16
@@ -14,6 +20,8 @@ Vue3+Ts+Vite+Pinia 前端模板
 - axios
 - element-plus
 - auto import vue
+- i18n
+- login page
 
 ## Vscode必装插件
 - `Code Spell Checker` 拼写检查
