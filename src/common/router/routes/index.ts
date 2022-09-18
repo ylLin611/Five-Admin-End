@@ -2,7 +2,7 @@ import type { RouteRecordRaw } from 'vue-router'
 
 /**
  * 路由配置
- * @description 所有路由都在这里集中管理
+ * @description 公共路由
  */
 const routes: RouteRecordRaw[] = [
   /**
@@ -10,11 +10,7 @@ const routes: RouteRecordRaw[] = [
    */
   {
     path: '/',
-    name: 'home',
-    component: () => import('@/modules/Home.vue'),
-    meta: {
-      title: 'Home',
-    },
+    redirect: '/home',
   },
   /**
    * Login
@@ -22,9 +18,17 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/login',
     name: 'login',
-    component: () => import('@common/views/login/Login.vue'),
+    component: () => import('@common/views/Login.vue'),
     meta: {
       title: 'Login',
+    },
+  },
+  {
+    path: '/home',
+    name: 'home',
+    component: () => import('@common/views/Home.vue'),
+    meta: {
+      title: 'Home',
     },
   },
 ]

@@ -22,6 +22,8 @@ npm run dev
 - auto import vue
 - i18n
 - login page
+- mock
+- unocss
 
 ## Vscode必装插件
 - `Code Spell Checker` 拼写检查

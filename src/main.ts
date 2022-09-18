@@ -5,8 +5,7 @@ import router from '@/common/router'
 import i18n from './language/i18n'
 import 'normalize.css'
 import 'element-plus/theme-chalk/index.css'
-
-// 全局样式
+import 'uno.css'
 import '@less/global.less'
 
 createApp(App)

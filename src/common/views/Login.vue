@@ -63,6 +63,7 @@ import i18n from '@/language/i18n'
 import { User, Lock, CaretBottom } from '@element-plus/icons-vue'
 import { ElForm } from 'element-plus'
 import localCache from '@/common/utils/cache'
+import { useLoginStore } from '../stores/login'
 
 const loginForm = ref({
   username: localCache.getCache('username') ?? '',
@@ -100,7 +101,7 @@ const loginRef = ref<InstanceType<typeof ElForm>>()
 function handleLogin() {
   loginRef.value?.validate((valid) => {
     if (valid) {
-      // 1.判断是否需要记住密码(此次仅需要记住用户名)
+      // 1.判断是否需要记住密码
       localCache.setCache('rememberMe', loginForm.value.rememberMe)
       if (loginForm.value.rememberMe) {
         localCache.setCache('name', loginForm.value.username)
@@ -110,10 +111,10 @@ function handleLogin() {
         // localCache.deleteCache('password')
       }
       // 2.开始登录
-      // store.dispatch('login/accountLoginAction', {
-      //   name: loginForm.value.username,
-      //   password: loginForm.value.password
-      // })
+      useLoginStore().login({
+        username: loginForm.value.username,
+        password: loginForm.value.password,
+      })
     }
   })
 }

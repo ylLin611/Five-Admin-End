@@ -6,6 +6,8 @@ import components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import banner from 'vite-plugin-banner'
 import pkg from './package.json'
+import Unocss from 'unocss/vite'
+import { viteMockServe } from 'vite-plugin-mock'
 
 const resolve = (dir: string): string => path.resolve(__dirname, dir)
 
@@ -82,6 +84,13 @@ export default defineConfig({
       extensions: ['vue', 'ts'],
       deep: true,
       dts: false,
+    }),
+    Unocss({
+      /* options */
+    }),
+    viteMockServe({
+      mockPath: './src/mock',
+      localEnabled: true,
     }),
     banner(
       `/**\n * name: ${pkg.name}\n * version: v${pkg.version}\n * description: v${pkg.description}\n * author: ${pkg.author}\n */`
